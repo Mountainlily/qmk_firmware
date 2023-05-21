@@ -1,19 +1,39 @@
-![SofleKeyboard default keymap](https://github.com/josefadamcik/SofleKeyboard/raw/master/Images/soflekeyboard.png)
-![SofleKeyboard adjust layer](https://github.com/josefadamcik/SofleKeyboard/raw/master/Images/soflekeyboard_layout_adjust.png)
+# MountainLily's Layout for Sofle Keyboard
 
+Custom Layout: [Keyboard Layout Editor](http://www.keyboard-layout-editor.com/#/gists/f608ccf7e010b623a38bfe4d4dbe59f9)
 
-# Default keymap for Sofle Keyboard
+## Features:
 
-Layout in [Keyboard Layout Editor](http://www.keyboard-layout-editor.com/#/gists/76efb423a46cbbea75465cb468eef7ff) and [adjust layer](http://www.keyboard-layout-editor.com/#/gists/4bcf66f922cfd54da20ba04905d56bd4)
+- Workman Layout
+- Encoders
+- Via Enabled
+- Mouse Navigation
+- N-Key Rollover Enabled
+- Layers (hold to turn on layers)
+    - 0 - (Default) Workman
+    - 1 - Navigation
+    - 2 - Symbols
+    - 3 - Function Keys + Specialty
+- Common keys on left hand
+- Set EEPROM handedness
 
+### Feature Details
 
-Features:
-
-- Symmetric modifiers (CMD/Super, Alt/Opt, Ctrl, Shift)
-- Various modes, can be switched (using Adjust layer and the selected one is stored in EEPROM.
-- Modes for Qwerty and Colemak support
-- Modes for Mac vs Linux/Win support -> different order of modifiers and different action shortcuts on the "UPPER" layer (the red one in the image). Designed to simplify transtions when switching between operating systems often.
-- The OLED on master half shows selected mode and caps lock state and is rotated.
-- Left encoder controls volume up/down/mute. Right encoder PGUP/PGDOWN.
-
-
+- Encoders: *CW / CCW / Press*
+    - Left encoder 
+        - Program switcher
+        - Layer 0: *Alt+Tab / Shift+Alt+Tab / KC_NO*
+    - Right encoder 
+        - Media Controls
+        - Layer 0: *Volume Up / Volume Down / Mute*
+        - Layer 1: *Next / Previous / PlayPause*
+- Left handed availability
+    - Numbers 6 to 9 + 0
+    - Pinky modifiers for VSCode
+        - Alt+Ctrl
+        - Alt+Shift
+    - Backspace
+    - Delete
+- Mouse Keys
+    - Uses *Kinetic Mode*
+    - Maintains low speed w/ quick movement maintained   
