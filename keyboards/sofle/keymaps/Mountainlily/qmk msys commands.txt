@@ -1,3 +1,0 @@
-qmk json2c C:/Users/jason/Downloads/sofle_beck_v1_1_0.json
-
-qmk compile -kb sofle/rev1 -km Mountainlily

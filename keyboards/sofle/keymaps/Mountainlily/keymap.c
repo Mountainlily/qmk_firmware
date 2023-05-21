@@ -1,3 +1,5 @@
+// qmk compile -kb sofle/rev1 -km mountainlily
+
 #include QMK_KEYBOARD_H
 
 
@@ -10,6 +12,7 @@ uint16_t alt_tab_timeout_spt = 1000;
 enum custom_keycodes {          
   ALT_TAB = SAFE_RANGE,
   SHALT_TAB,
+  JABECK,
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -42,7 +45,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         unregister_code(KC_TAB);
       }
       break;
+
+    case JABECK:
+        if (record->event.pressed) {
+            SEND_STRING("JABECK");
+        } else {
+
+        }
+        break;
+    }
+    return true;
   }
+
   return true;
 }
 
@@ -86,7 +100,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         RCS(KC_ESC), KC_NO,      KC_NO,   KC_NO,   KC_NO,         NK_TOGG,                                       KC_APP,       KC_PSCR, KC_SCRL, KC_PAUS, KC_INS,     KC_NUM, 
         KC_NO,       KC_NO,      KC_NO,   KC_NO,   LCTL(KC_F2),   KC_NO,                                         KC_NO,        KC_F1,   KC_F2,   KC_F3,   KC_F4,      KC_NO, 
         KC_TRNS,     KC_NO,      KC_NO,   KC_NO,   KC_F2,         KC_NO,                                         KC_NO,        KC_F5,   KC_F6,   KC_F7,   KC_F8,      KC_TRNS, 
-        KC_TRNS,     RGUI(KC_L), KC_NO,   KC_NO,   KC_NO,         KC_NO,        KC_NO,          KC_NO,           KC_NO,        KC_F9,   KC_F10,  KC_F11,  KC_F12,     KC_TRNS, 
+        KC_TRNS,     RGUI(KC_L), KC_NO,   KC_NO,   KC_NO,         JABECK,       KC_NO,          KC_NO,           KC_NO,        KC_F9,   KC_F10,  KC_F11,  KC_F12,     KC_TRNS, 
                                  KC_TRNS, KC_TRNS, KC_TRNS,       KC_TRNS,      KC_TRNS,        KC_TRNS,         KC_TRNS,      KC_TRNS, KC_TRNS, TO(0)
         )
 
