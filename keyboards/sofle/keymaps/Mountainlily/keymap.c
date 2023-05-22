@@ -47,12 +47,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       break;
 
     case JABECK:
-        if (record->event.pressed) {
-            SEND_STRING("JABECK");
-        } else {
-
-        }
-        break;
+      if (record->event.pressed) {
+          SEND_STRING("JABECK");
+      }
+      break;
     }
 
   return true;
